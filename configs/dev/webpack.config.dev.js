@@ -8,6 +8,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const pkg = require('../../package.json');
 
 
@@ -51,8 +52,13 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      template: './client/src/index.html',
       title: pkg.title,
-      template: 'client/src/index.html'
+    }),
+    new StyleLintPlugin({
+      files: ['./client/src/**/*.s?(a|c)ss'],
+      syntax: 'scss',
+      configFile: './configs/dev/.stylelintrc'
     }),
     new FaviconsWebpackPlugin('./client/src/favicon.png'),
     new webpack.HotModuleReplacementPlugin(),

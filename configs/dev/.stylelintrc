@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "max-empty-lines": null,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ]
+  },
+  "plugins": [
+    "stylelint-order"
+  ]
+}

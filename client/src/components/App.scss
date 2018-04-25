@@ -1,4 +1,4 @@
-// =========================| Switchboard A17 |========================= //
+// =========================| App |========================= //
 
 
 
@@ -13,6 +13,8 @@ $col-bgr: #ccf;
 $col-text: #fff;
 
 body {
+  position: relative;
+  display: block;
   background-color: $col-bgr;
 }
 
