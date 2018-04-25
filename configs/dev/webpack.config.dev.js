@@ -1,9 +1,18 @@
+// =========================| Webpack Config: Dev |========================= //
+
+
+
+//--------------------------| Import
+
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pkg = require('../../package.json');
 
-module.exports = {
+
+//--------------------------| Body
+
+const config = {
   mode: 'development',
   entry: [
     `webpack-dev-server/client?http://localhost:${pkg.ports.dev}`,
@@ -44,7 +53,13 @@ module.exports = {
       title: pkg.title,
       template: 'client/src/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin()
   ],
   devtool: 'cheap-module-eval-source-map'
 };
+
+
+//--------------------------| Export
+
+module.exports = config;

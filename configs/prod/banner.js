@@ -1,6 +1,15 @@
+// =========================| Production banner |========================= //
+
+
+
+//--------------------------| Import
+
 const pkg = require('../../package.json');
 
-module.exports =
+
+//--------------------------| Body
+
+const banner =
 `
  • ${pkg.title || pkg.name} (v${pkg.version})
    ${pkg.homepage}
@@ -12,3 +21,8 @@ module.exports =
    
  • Last update: ${new Date().toDateString()}
 `;
+
+
+//--------------------------| Export
+
+module.exports = banner;

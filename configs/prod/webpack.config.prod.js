@@ -1,6 +1,11 @@
+// =========================| Webpack Config: Prod |========================= //
+
+
+
+//--------------------------| Import
+
 const path = require('path');
 const webpack = require('webpack');
-const dist  = path.join(__dirname, '../../client/dist');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -8,12 +13,15 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const pkg = require('../../package.json');
 const banner = require('./banner');
 
-module.exports = {
+
+//--------------------------| Body
+
+const config = {
   mode: 'production',
   entry: './client/src/index.js',
   output: {
-    path: dist,
-    filename: 'bundle.js'
+    path: path.join(__dirname, '../../client/dist'),
+    filename: 'app.js'
   },
   module: {
     rules: [
@@ -59,6 +67,12 @@ module.exports = {
         }
       }
     }),
-    new webpack.BannerPlugin({ banner })
+    new webpack.BannerPlugin({ banner }),
+    new webpack.optimize.OccurenceOrderPlugin()
   ]
 };
+
+
+//--------------------------| Export
+
+module.exports = config;

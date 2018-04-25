@@ -1,11 +1,23 @@
+// =========================| Development server |========================= //
+
+
+
+//--------------------------| Import
+
 const Webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const opn = require('opn');
 const config = require('../configs/dev/webpack.config.dev');
 const pkg = require('../package.json');
 
+
+//--------------------------| Define
+
 const port = pkg.ports.dev;
 const browser = process.platform === 'win32' ? 'Chrome' : '/Applications/Google Chrome.app';
+
+
+//--------------------------| Config
 
 const server = new WebpackDevServer(Webpack(config), {
   hot: true,
@@ -23,6 +35,9 @@ const server = new WebpackDevServer(Webpack(config), {
     colors: true
   }
 });
+
+
+//--------------------------| Initialize
 
 server.listen(port, 'localhost', function (err) {
   if (err) {
