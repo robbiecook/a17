@@ -16,16 +16,20 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           {
-            loader: 'style-loader', // creates style nodes from JS strings,
+            loader: 'style-loader' // creates style nodes from JS strings,
           },
           {
             loader: 'css-loader', // translates CSS into CommonJS
             options: {
-              // modules: true
+              // modules: true,
+              sourceMap: true
             }
           },
           {
             loader: 'sass-loader', // compiles Sass to CSS
+            options: {
+              sourceMap: true
+            }
           }
         ]
       },

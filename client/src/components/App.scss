@@ -9,8 +9,13 @@
 
 //--------------------------| Body
 
-$test: #ccf;
+$col-bgr: #ccf;
+$col-text: #fff;
 
 body {
-  background-color: $test;
+  background-color: $col-bgr;
+}
+
+.ttl {
+  color: $col-text;
 }
