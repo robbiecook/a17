@@ -9,9 +9,15 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const pkg = require('../../package.json');
 const banner = require('./banner');
+
+
+//--------------------------| Define
+
+const dist = path.join(__dirname, '../../client/dist');
 
 
 //--------------------------| Body
@@ -20,8 +26,8 @@ const config = {
   mode: 'production',
   entry: './client/src/index.js',
   output: {
-    path: path.join(__dirname, '../../client/dist'),
-    filename: 'app.js'
+    path: dist,
+    filename: 'app.[chunkhash].js'
   },
   module: {
     rules: [
@@ -49,11 +55,16 @@ const config = {
       }]
   },
   plugins: [
+    new CleanWebpackPlugin(['**/*.*'], {
+      root:     dist,
+      verbose:  true,
+      dry:      false
+    }),
     new HtmlWebpackPlugin({
       title: pkg.title,
       template: 'client/src/index.html'
     }),
-    new ExtractTextPlugin('stylesheet.css'),
+    new ExtractTextPlugin('app.[chunkhash].css'),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
@@ -68,7 +79,7 @@ const config = {
       }
     }),
     new webpack.BannerPlugin({ banner }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin()
   ]
 };
 

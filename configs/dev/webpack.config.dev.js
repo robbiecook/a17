@@ -54,7 +54,7 @@ const config = {
       template: 'client/src/index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin()
   ],
   devtool: 'cheap-module-eval-source-map'
 };
