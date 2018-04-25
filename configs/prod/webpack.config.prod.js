@@ -63,7 +63,14 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       title: pkg.title,
-      template: 'client/src/index.html'
+      template: 'client/src/index.html',
+      minify: {
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        preserveLineBreaks: false
+      }
     }),
     new ExtractTextPlugin('app.[chunkhash].css'),
     new OptimizeCssAssetsPlugin({
