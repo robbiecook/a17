@@ -81,6 +81,10 @@ const config = {
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
+        compress: {
+          drop_debugger: true,
+          drop_console: true
+        },
         output: {
           comments: false
         }
@@ -106,7 +110,10 @@ const config = {
       title: pkg.title
     }),
     new webpack.BannerPlugin({ banner }),
-    new webpack.optimize.OccurrenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
   ]
 };
 

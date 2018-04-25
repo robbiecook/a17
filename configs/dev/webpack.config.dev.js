@@ -47,7 +47,10 @@ const config = {
       {
         loader: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        options: {
+          plugins: ['react-hot-loader/babel']
+        }
       }]
   },
   plugins: [
@@ -62,7 +65,10 @@ const config = {
     }),
     new FaviconsWebpackPlugin('./client/src/favicon.png'),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
   ],
   devtool: 'cheap-module-eval-source-map'
 };
