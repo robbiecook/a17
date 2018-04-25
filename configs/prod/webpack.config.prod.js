@@ -1,7 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
 const dist  = path.join(__dirname, '../../client/dist');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const pkg = require('../../package.json');
+const banner = require('./banner');
 
 module.exports = {
   mode: 'production',
@@ -14,20 +19,20 @@ module.exports = {
     rules: [
       {
         test: /\.s?css$/,
-        use: [
-          {
-            loader: 'style-loader', // creates style nodes from JS strings,
-          },
-          {
-            loader: 'css-loader', // translates CSS into CommonJS
-            options: {
-              // modules: true
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'css-loader', // translates CSS into CommonJS
+              options: {
+                // modules: true,
+              }
+            },
+            {
+              loader: 'sass-loader', // compiles Sass to CSS
             }
-          },
-          {
-            loader: 'sass-loader', // compiles Sass to CSS
-          }
-        ]
+          ],
+          fallback: 'style-loader' // creates style nodes from JS strings,
+        })
       },
       {
         loader: 'babel-loader',
@@ -39,7 +44,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: pkg.title,
       template: 'client/src/index.html'
-    })
+    }),
+    new ExtractTextPlugin('stylesheet.css'),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: { removeAll: true } },
+      canPrint: true
+    }),
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        output: {
+          comments: false
+        }
+      }
+    }),
+    new webpack.BannerPlugin({ banner })
   ],
   devtool: 'source-map'
 };

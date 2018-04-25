@@ -1,6 +1,15 @@
+// =========================| App |========================= //
+
+
+
+//--------------------------| Import
+
 import React from 'react';
 import './App.scss';
 import { hot } from 'react-hot-loader'
+
+
+//--------------------------| Body
 
 class App extends React.Component {
   state = {
@@ -15,5 +24,8 @@ class App extends React.Component {
     );
   }
 }
+
+
+//--------------------------| Export
 
 export default hot(module)(App);

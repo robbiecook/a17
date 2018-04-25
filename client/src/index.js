@@ -1,8 +1,14 @@
+// =========================| Switchboard A17 |========================= //
+
+
+
+//--------------------------| Import
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
-import 'normalize.css/normalize.css';
-// import './styles/styles.scss';
+
+//--------------------------| Render
 
 ReactDOM.render(<App />, document.getElementById('app'));

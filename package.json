@@ -10,8 +10,13 @@
     "serve:dev": "node server/dev",
     "serve:prod": "node client/build && node server/prod"
   },
-  "author": "Martin Metodiev",
-  "license": "MIT",
+  "homepage": "http://a17.martinmetodiev.com",
+  "author": {
+    "name": "Martin Metodiev",
+    "email": "metodiev.martin@gmail.com",
+    "url": "http://www.martinmetodiev.com"
+  },
+  "license": "UNLICENSED",
   "ports": {
     "dev": 8000,
     "prod": 9000
@@ -25,16 +30,19 @@
     "babel-preset-react": "^6.24.1",
     "chalk": "^2.4.0",
     "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "3.0.7",
     "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
     "opn": "^5.3.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.1.1",
     "react-modal": "^3.3.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "validator": "^9.4.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
