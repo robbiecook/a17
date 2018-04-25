@@ -7,6 +7,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const pkg = require('../../package.json');
 
 
@@ -53,6 +54,7 @@ const config = {
       title: pkg.title,
       template: 'client/src/index.html'
     }),
+    new FaviconsWebpackPlugin('./client/src/favicon.png'),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin()
   ],
