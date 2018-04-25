@@ -61,7 +61,7 @@ const config = {
     new StyleLintPlugin({
       files: ['./client/src/**/*.s?(a|c)ss'],
       syntax: 'scss',
-      configFile: './configs/dev/.stylelintrc'
+      configFile: '.stylelintrc'
     }),
     new FaviconsWebpackPlugin('./client/src/favicon.png'),
     new webpack.HotModuleReplacementPlugin(),
