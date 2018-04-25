@@ -46,11 +46,16 @@ const config = {
       },
       {
         loader: 'babel-loader',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         options: {
           plugins: ['react-hot-loader/babel']
         }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
       }]
   },
   plugins: [

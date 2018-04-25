@@ -21,9 +21,15 @@
     "dev": 8000,
     "prod": 9000
   },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.1.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
@@ -31,6 +37,12 @@
     "chalk": "^2.4.0",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "favicons-webpack-plugin": "0.0.9",
     "html-webpack-plugin": "3.0.7",
@@ -38,9 +50,6 @@
     "normalize.css": "^8.0.0",
     "opn": "^5.3.0",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-hot-loader": "^4.1.1",
     "react-modal": "^3.3.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",

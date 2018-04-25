@@ -5,25 +5,17 @@
 //--------------------------| Import
 
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import './App.scss';
-import { hot } from 'react-hot-loader'
 
 
 //--------------------------| Body
 
-class App extends React.Component {
-  state = {
-
-  };
-
-  render() {
-    return (
-      <div>
-        <h1 className="ttl">Hello, World!</h1>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <h1 className="ttl">Hello, World!</h1>
+  </div>
+);
 
 
 //--------------------------| Export
