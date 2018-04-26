@@ -7,7 +7,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -34,20 +34,31 @@ const config = {
     rules: [
       {
         test: /\.s?css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader', // translates CSS into CommonJS
-              options: {
-                // modules: true,
-              }
-            },
-            {
-              loader: 'sass-loader', // compiles Sass to CSS
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+            options: {
+              // modules: true,
             }
-          ],
-          fallback: 'style-loader' // creates style nodes from JS strings,
-        })
+          },
+          {
+            loader: 'sass-loader', // compiles Sass to CSS
+          },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                './node_modules/compass-mixins/lib/_compass.scss',
+                './client/src/styles/resources/data/registries/core/**/*.scss',
+                './client/src/styles/resources/data/registries/items/**/*.scss',
+                './client/src/styles/resources/functions/**/*.scss',
+                './client/src/styles/resources/data/roles/**/*.scss',
+                './client/src/styles/resources/mixins/**/*.scss'
+              ]
+            },
+          }
+        ]
       },
       {
         loader: 'babel-loader',
@@ -63,7 +74,7 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       title: pkg.title,
-      template: 'client/src/markup.html',
+      template: './client/src/markup.html',
       minify: {
         minifyCSS: true,
         minifyJS: true,
@@ -72,7 +83,9 @@ const config = {
         preserveLineBreaks: false
       }
     }),
-    new ExtractTextPlugin('app.[chunkhash].css'),
+    new MiniCssExtractPlugin({
+      filename: "app.[chunkhash].css"
+    }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),

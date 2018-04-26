@@ -6,9 +6,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css/normalize.css';
+
 import App from './app';
 import Model from './model.json';
-import './styles.scss';
 
 
 //--------------------------| Body

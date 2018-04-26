@@ -24,11 +24,6 @@ const config = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.scss$/,
-        loader: 'import-glob-loader'
-      },
-      {
         test: /\.s?css$/,
         use: [
           {
@@ -46,6 +41,19 @@ const config = {
             options: {
               sourceMap: true
             }
+          },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                './node_modules/compass-mixins/lib/_compass.scss',
+                './client/src/styles/resources/data/registries/core/**/*.scss',
+                './client/src/styles/resources/data/registries/items/**/*.scss',
+                './client/src/styles/resources/functions/**/*.scss',
+                './client/src/styles/resources/data/roles/**/*.scss',
+                './client/src/styles/resources/mixins/**/*.scss'
+              ]
+            },
           }
         ]
       },
