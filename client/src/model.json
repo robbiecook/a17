@@ -2,78 +2,78 @@
   "rooms": [
     {
       "name": "living_room",
-      "title": "Всекидневна"
+      "title": "Living room"
     },
     {
       "name": "bedroom",
-      "title": "Спалня"
+      "title": "Bedroom"
     },
     {
       "name": "kinder_room",
-      "title": "Детска стая"
+      "title": "Kinder room"
     },
     {
       "name": "bathroom_big",
-      "title": "Голяма баня"
+      "title": "Big bathroom"
     },
     {
       "name": "bathroom_small",
-      "title": "Малка баня"
+      "title": "Small bathroom"
     },
     {
       "name": "closet",
-      "title": "Килер"
+      "title": "Closet"
     },
     {
       "name": "corridor",
-      "title": "Коридор"
+      "title": "Corridor"
     },
     {
       "name": "balcony_living",
-      "title": "Балкон на всекидневната"
+      "title": "Living balcony"
     },
     {
       "name": "balcony_kinder",
-      "title": "Балкон на детската стая"
+      "title": "Kinder balcony"
     }
   ],
 
   "devices": [
     {
       "name": "boiler",
-      "title": "Бойлер"
+      "title": "Boiler"
     },
     {
       "name": "air_conditioners",
-      "title": "Климатици"
+      "title": "Air conditioners"
     },
     {
       "name": "hobs",
-      "title": "Котлони"
+      "title": "Hobs"
     },
     {
       "name": "washing_machine",
-      "title": "Пералня"
+      "title": "Washing machine"
     },
     {
       "name": "oven",
-      "title": "Печка"
+      "title": "Oven"
     },
     {
       "name": "dishwasher",
-      "title": "Съдомиялна"
+      "title": "Dishwasher"
     },
     {
       "name": "fridge",
-      "title": "Хладилник"
+      "title": "Fridge"
     },
     {
       "name": "aspirator",
-      "title": "Аспиратор"
+      "title": "Aspirator"
     },
     {
       "name": "tv",
-      "title": "Телевизор"
+      "title": "TV"
     },
     {
       "name": "apple_tv",
@@ -81,7 +81,7 @@
     },
     {
       "name": "server",
-      "title": "Сървър"
+      "title": "Server"
     }
   ],
 
@@ -93,7 +93,7 @@
       "label": "C32",
       "role": {
         "name": "main",
-        "title": "Главен предпазител"
+        "title": "General switch"
       }
     },
     {
@@ -104,7 +104,7 @@
       "lights": true,
       "role": {
         "name": "lights",
-        "title": "Осветления"
+        "title": "Lights"
       },
       "rooms": [
         "living_room",
@@ -121,7 +121,7 @@
       "lights": true,
       "role": {
         "name": "lights",
-        "title": "Осветления"
+        "title": "Lights"
       },
       "rooms": [
         "corridor",
@@ -137,7 +137,7 @@
       "label": "C16",
       "role": {
         "name": "unknown",
-        "title": "Незнайна функция"
+        "title": "Unknown function"
       }
     },
     {
@@ -147,7 +147,7 @@
       "label": "C16",
       "role": {
         "name": "cooking",
-        "title": "Готварски уреди"
+        "title": "Cooking devices"
       },
       "rooms": [
         "living_room"
@@ -164,7 +164,7 @@
       "label": "C6",
       "role": {
         "name": "unknown",
-        "title": "Незнайна функция"
+        "title": "Unknown function"
       }
     },
 
@@ -177,7 +177,7 @@
       "outlets": true,
       "role": {
         "name": "laundry",
-        "title": "Пералня и сушилня"
+        "title": "Washing machine & dryer"
       },
       "rooms": [
         "closet"
@@ -194,7 +194,7 @@
       "black": true,
       "role": {
         "name": "boiler",
-        "title": "Бойлер"
+        "title": "Boiler"
       },
       "rooms": [
         "closet"
@@ -211,7 +211,7 @@
       "black": true,
       "role": {
         "name": "unknown",
-        "title": "Незнайна функция"
+        "title": "Unknown function"
       }
     },
     {
@@ -222,7 +222,7 @@
       "outlets": true,
       "role": {
         "name": "outlets",
-        "title": "Всички контакти"
+        "title": "All outlets"
       }
     },
     {
@@ -233,7 +233,7 @@
       "outlets": true,
       "role": {
         "name": "outlets",
-        "title": "Kонтакти"
+        "title": "Outlets"
       },
       "rooms": [
         "living_room"
@@ -252,7 +252,7 @@
       "outlets": true,
       "role": {
         "name": "outlets",
-        "title": "Kонтакти"
+        "title": "Outlets"
       },
       "rooms": [
         "living_room"
@@ -271,7 +271,7 @@
       "outlets": true,
       "role": {
         "name": "outlets",
-        "title": "Kонтакти"
+        "title": "Outlets"
       },
       "rooms": [
         "corridor",
@@ -287,7 +287,7 @@
       "outlets": true,
       "role": {
         "name": "outlets",
-        "title": "Kонтакти"
+        "title": "Outlets"
       },
       "rooms": [
         "bedroom"
