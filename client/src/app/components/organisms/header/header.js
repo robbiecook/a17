@@ -5,7 +5,7 @@
 //--------------------------| Import
 
 import React from 'react';
-import pkg from '../../../../../package.json';
+import pkg from '../../../../../../package.json';
 import './header.scss';
 
 

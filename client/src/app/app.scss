@@ -2,11 +2,6 @@
 
 
 
-//--------------------------| Import
-
-@import '../../../node_modules/normalize.css/normalize.css';
-
-
 //--------------------------| Body
 
 #app {
@@ -14,4 +9,5 @@
   max-width: 480px;
   min-height: 100vh;
   margin: 0 auto;
+  font: 300 1rem 'Open Sans', sans-serif;
 }

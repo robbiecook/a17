@@ -24,6 +24,11 @@ const config = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.scss$/,
+        loader: 'import-glob-loader'
+      },
+      {
         test: /\.s?css$/,
         use: [
           {
@@ -64,7 +69,7 @@ const config = {
       title: pkg.title,
     }),
     new StyleLintPlugin({
-      files: ['./client/src/**/*.s?(a|c)ss'],
+      files: ['./client/src/**/*.scss'],
       syntax: 'scss',
       configFile: '.stylelintrc'
     }),

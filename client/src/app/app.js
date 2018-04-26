@@ -6,8 +6,8 @@
 
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import HomePage from './templates/homepage';
-import './App.scss';
+import HomePage from './components/templates/homepage';
+import './app.scss';
 
 
 //--------------------------| Body

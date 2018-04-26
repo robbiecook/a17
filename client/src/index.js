@@ -6,8 +6,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import App from './app';
 import Model from './model.json';
+import './styles.scss';
 
 
 //--------------------------| Body
