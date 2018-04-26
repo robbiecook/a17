@@ -12,7 +12,7 @@ import './App.scss';
 //--------------------------| Body
 
 const App = () => (
-  <div>
+  <div id="app">
     <h1 className="ttl">Hello, World!</h1>
   </div>
 );

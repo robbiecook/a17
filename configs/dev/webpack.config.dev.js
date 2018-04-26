@@ -60,7 +60,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './client/src/index.html',
+      template: './client/src/markup.html',
       title: pkg.title,
     }),
     new StyleLintPlugin({

@@ -63,7 +63,7 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       title: pkg.title,
-      template: 'client/src/index.html',
+      template: 'client/src/markup.html',
       minify: {
         minifyCSS: true,
         minifyJS: true,
