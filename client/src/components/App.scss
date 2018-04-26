@@ -9,15 +9,9 @@
 
 //--------------------------| Body
 
-$col-bgr: #f5f5f5;
-$col-text: #333;
-
-body {
-  position: relative;
-  display: block;
-  background-color: $col-bgr;
-}
-
-.ttl {
-  color: $col-text;
+#app {
+  min-width: 320px;
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
 }
