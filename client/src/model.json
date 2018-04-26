@@ -1,0 +1,297 @@
+{
+  "rooms": [
+    {
+      "name": "living_room",
+      "title": "Всекидневна"
+    },
+    {
+      "name": "bedroom",
+      "title": "Спалня"
+    },
+    {
+      "name": "kinder_room",
+      "title": "Детска стая"
+    },
+    {
+      "name": "bathroom_big",
+      "title": "Голяма баня"
+    },
+    {
+      "name": "bathroom_small",
+      "title": "Малка баня"
+    },
+    {
+      "name": "closet",
+      "title": "Килер"
+    },
+    {
+      "name": "corridor",
+      "title": "Коридор"
+    },
+    {
+      "name": "balcony_living",
+      "title": "Балкон на всекидневната"
+    },
+    {
+      "name": "balcony_kinder",
+      "title": "Балкон на детската стая"
+    }
+  ],
+
+  "devices": [
+    {
+      "name": "boiler",
+      "title": "Бойлер"
+    },
+    {
+      "name": "air_conditioners",
+      "title": "Климатици"
+    },
+    {
+      "name": "hobs",
+      "title": "Котлони"
+    },
+    {
+      "name": "washing_machine",
+      "title": "Пералня"
+    },
+    {
+      "name": "oven",
+      "title": "Печка"
+    },
+    {
+      "name": "dishwasher",
+      "title": "Съдомиялна"
+    },
+    {
+      "name": "fridge",
+      "title": "Хладилник"
+    },
+    {
+      "name": "aspirator",
+      "title": "Аспиратор"
+    },
+    {
+      "name": "tv",
+      "title": "Телевизор"
+    },
+    {
+      "name": "apple_tv",
+      "title": "AppleTV"
+    },
+    {
+      "name": "server",
+      "title": "Сървър"
+    }
+  ],
+
+  "switchers": [
+    {
+      "id": "level1_switch1",
+      "wings": 3,
+      "level": 1,
+      "label": "C32",
+      "role": {
+        "name": "main",
+        "title": "Главен предпазител"
+      }
+    },
+    {
+      "id": "level1_switch2",
+      "wings": 1,
+      "level": 1,
+      "label": "C10",
+      "lights": true,
+      "role": {
+        "name": "lights",
+        "title": "Осветления"
+      },
+      "rooms": [
+        "living_room",
+        "closet",
+        "balcony_living",
+        "bathroom_small"
+      ]
+    },
+    {
+      "id": "level1_switch3",
+      "wings": 1,
+      "level": 1,
+      "label": "C10",
+      "lights": true,
+      "role": {
+        "name": "lights",
+        "title": "Осветления"
+      },
+      "rooms": [
+        "corridor",
+        "bedroom",
+        "kinder_room",
+        "bathroom_big"
+      ]
+    },
+    {
+      "id": "level1_switch4",
+      "wings": 1,
+      "level": 1,
+      "label": "C16",
+      "role": {
+        "name": "unknown",
+        "title": "Незнайна функция"
+      }
+    },
+    {
+      "id": "level1_switch5",
+      "wings": 1,
+      "level": 1,
+      "label": "C16",
+      "role": {
+        "name": "cooking",
+        "title": "Готварски уреди"
+      },
+      "rooms": [
+        "living_room"
+      ],
+      "devices": [
+        "hobs",
+        "oven"
+      ]
+    },
+    {
+      "id": "level1_switch6",
+      "wings": 1,
+      "level": 1,
+      "label": "C6",
+      "role": {
+        "name": "unknown",
+        "title": "Незнайна функция"
+      }
+    },
+
+    {
+      "id": "level2_switch1",
+      "wings": 2,
+      "level": 2,
+      "label": "C16",
+      "black": true,
+      "outlets": true,
+      "role": {
+        "name": "laundry",
+        "title": "Пералня и сушилня"
+      },
+      "rooms": [
+        "closet"
+      ],
+      "devices": [
+        "washing_machine"
+      ]
+    },
+    {
+      "id": "level2_switch2",
+      "wings": 2,
+      "level": 2,
+      "label": "C16",
+      "black": true,
+      "role": {
+        "name": "boiler",
+        "title": "Бойлер"
+      },
+      "rooms": [
+        "closet"
+      ],
+      "devices": [
+        "boiler"
+      ]
+    },
+    {
+      "id": "level2_switch3",
+      "wings": 2,
+      "level": 2,
+      "label": "C25",
+      "black": true,
+      "role": {
+        "name": "unknown",
+        "title": "Незнайна функция"
+      }
+    },
+    {
+      "id": "level2_switch4",
+      "wings": 2,
+      "level": 2,
+      "label": "25A",
+      "outlets": true,
+      "role": {
+        "name": "outlets",
+        "title": "Всички контакти"
+      }
+    },
+    {
+      "id": "level2_switch5",
+      "wings": 1,
+      "level": 2,
+      "label": "C16",
+      "outlets": true,
+      "role": {
+        "name": "outlets",
+        "title": "Kонтакти"
+      },
+      "rooms": [
+        "living_room"
+      ],
+      "devices": [
+        "tv",
+        "apple_tv",
+        "server"
+      ]
+    },
+    {
+      "id": "level2_switch6",
+      "wings": 1,
+      "level": 2,
+      "label": "C16",
+      "outlets": true,
+      "role": {
+        "name": "outlets",
+        "title": "Kонтакти"
+      },
+      "rooms": [
+        "living_room"
+      ],
+      "devices": [
+        "fridge",
+        "aspirator",
+        "dishwasher"
+      ]
+    },
+    {
+      "id": "level2_switch7",
+      "wings": 1,
+      "level": 2,
+      "label": "C16",
+      "outlets": true,
+      "role": {
+        "name": "outlets",
+        "title": "Kонтакти"
+      },
+      "rooms": [
+        "corridor",
+        "kinder_room",
+        "bathroom_big"
+      ]
+    },
+    {
+      "id": "level2_switch8",
+      "wings": 1,
+      "level": 2,
+      "label": "C16",
+      "outlets": true,
+      "role": {
+        "name": "outlets",
+        "title": "Kонтакти"
+      },
+      "rooms": [
+        "bedroom"
+      ]
+    }
+  ]
+}
