@@ -5,10 +5,13 @@
 //--------------------------| Body
 
 #app {
-  min-width: 320px;
-  max-width: 480px;
-  min-height: 100vh;
+  @include font-smoothing();
+  @include box-shadow(0 0 20px #ccc);
+
+  min-width: map-get($reg-screens, 'min');
+  max-width: map-get($reg-screens, 'max');
   margin: 0 auto;
-  font: 300 1rem 'Open Sans', sans-serif;
+  font: map-get($roles-typo-font-weights, 'text') 1em map-get($roles-typo-font-families, 'text');
+  text-align: center;
   background-color: map-get($reg-backgrounds, 'pale-silver');
 }

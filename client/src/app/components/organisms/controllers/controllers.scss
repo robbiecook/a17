@@ -2,14 +2,8 @@
 
 
 
-//--------------------------| Variables
-
-$min-offset: map-get($roles-offsets, 'controllers');
-$max-offset: $min-offset * 2;
-
-
 //--------------------------| Body
 
 .po-controllers {
-  @include scaler(padding, $min-offset, $max-offset);
+  padding: get-em-unit(map-get($roles-offsets, 'controllers'));
 }

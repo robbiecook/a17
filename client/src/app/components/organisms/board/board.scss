@@ -2,16 +2,9 @@
 
 
 
-//--------------------------| Variables
-
-$min-offset: map-get($roles-offsets, 'board');
-$max-offset: $min-offset * 2;
-
-
 //--------------------------| Body
 
 .po-board {
-  @include scaler(padding, $min-offset, $max-offset);
-
+  padding: get-em-unit(map-get($roles-offsets, 'board'));
   background-color: map-get($reg-backgrounds, 'white');
 }

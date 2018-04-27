@@ -11,9 +11,11 @@ import './header.scss';
 
 //--------------------------| Body
 
+const title = pkg.title.split(' ');
+
 const Header = () => (
   <div className="po-header">
-    <span>{pkg.title}</span>
+    <span>{title[0]} <strong>{title[1]}</strong></span>
   </div>
 );
 

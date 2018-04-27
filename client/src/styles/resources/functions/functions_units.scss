@@ -13,8 +13,8 @@
 }
 
 
-//--------------------------| Get rem unit
+//--------------------------| Get em unit
 
-@function font-size($num, $unit: 'em') {
-  @return #{$num / strip-unit($roles-base-font-size)}#{$unit};
+@function get-em-unit($num, $unit: 'em') {
+  @return #{strip-unit($num) / strip-unit($roles-base-font-size)}#{$unit};
 }

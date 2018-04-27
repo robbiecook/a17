@@ -5,22 +5,15 @@
 //--------------------------| Font families
 
 $reg-font-families: (
-  'pp–serif':  '"pp–serif", Times, serif',
-  'pp–slab':   '"pp–slab", Times, serif',
-  'pp–sans':   '"pp–sans", Arial, sans-serif',
-  'pp–mono':   '"Courier New", monospace'
+  'pp–sans': '"Open Sans", sans-serif'
 );
 
 
 //--------------------------| Font weights
 
 $reg-font-weights: (
-  'light':    300,
-  'regular':  400,
-  'medium':   500,
-  'semibold': 600,
-  'bold':     700,
-  'black':    800
+  'light': 300,
+  'bold':  700
 );
 
 

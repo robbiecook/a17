@@ -15,5 +15,16 @@ html {
 //--------------------------| Body
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   background-color: map-get($reg-backgrounds, 'dirty-white');
+}
+
+
+//--------------------------| Text
+
+strong {
+  font-weight: map-get($reg-font-weights, 'bold');
 }
