@@ -4,12 +4,9 @@
 
 $reg-backgrounds: (
 
-  'white':         map-get($reg-colors, 'white'),
-  'alabaster':     map-get($reg-colors, 'alabaster'),
-  'bossanova':     map-get($reg-colors, 'bossanova'),
-  'mine-shaft':    map-get($reg-colors, 'mine-shaft'),
-  'black-squeeze': map-get($reg-colors, 'black-squeeze'),
-  'la-rioja':      map-get($reg-colors, 'la-rioja'),
-  'dirtywhite':    map-get($reg-colors, 'dirtywhite')
+  'white':       map-get($reg-colors, 'white'),
+  'black':       map-get($reg-colors, 'black'),
+  'pale-silver': map-get($reg-colors, 'pale-silver'),
+  'dirty-white': map-get($reg-colors, 'dirty-white')
 
 );

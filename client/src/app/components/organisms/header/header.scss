@@ -2,8 +2,23 @@
 
 
 
+//--------------------------| Variables
+
+$min-offset-h: map-get($roles-offsets, 'header');
+$max-offset-h: $min-offset-h * 2;
+$min-offset-v: 5px;
+$max-offset-v: $min-offset-v * 2;
+
+
 //--------------------------| Body
 
 .po-header {
+  @include scaler(padding-top, $min-offset-v, $max-offset-v);
+  @include scaler(padding-bottom, $min-offset-v, $max-offset-v);
+  @include scaler(padding-left, $min-offset-h, $max-offset-h);
+  @include scaler(padding-right, $min-offset-h, $max-offset-h);
+
+  color: map-get($roles-col-texts, 'negative');
   text-align: center;
+  background-color: map-get($reg-backgrounds, 'black');
 }

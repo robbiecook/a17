@@ -3,6 +3,8 @@
 
 
 $reg-gradients: (
-  'linear-white-to-gray': linear-gradient(top, map-get($reg-colors, 'white') 0%, map-get($reg-colors, 'white') 33%, map-get($reg-colors, 'alabaster') 100%),
-  'blur': radial-gradient(center, rgba(map-get($reg-colors, 'white'), .85) 50%, rgba(250, 250, 250, .2) 100%)
+  'orange':      linear-gradient(top, map-get($reg-colors, 'orange-light') 0%, map-get($reg-colors, 'orange-dark') 100%),
+  'black':       linear-gradient(top, map-get($reg-colors, 'graphite') 0%, map-get($reg-colors, 'black') 100%),
+  'dark-silver': linear-gradient(top, map-get($reg-colors, 'white') 0%, map-get($reg-colors, 'pale-silver') 49%, map-get($reg-colors, 'dark-silver') 51%, map-get($reg-colors, 'silver') 100%),
+  'pale-silver': linear-gradient(top, #f4f4f4 0%, #e7e7e7 49%, #e0e0e0 51%, #bdbdbd 100%)
 );

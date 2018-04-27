@@ -6,35 +6,27 @@ $reg-colors: (
 
   //--------------------------| Black & White
 
-  'black':         #000,
-  'white':         #fff,
+  'black':        #000,
+  'white':        #fff,
 
 
   //--------------------------| Gray
 
-  'mine-shaft':    #333,
-  'dove-gray':     #666,
-  'dusty-gray':    #999,
-  'silver':        #ccc,
-  'dirtywhite':    #fcfcfc,
+  'silver':       #d3d3d3,
+  'graphite':     #676767,
+  'dark-silver':  #e7e7e7,
+  'pale-silver':  #eee,
+  'dirty-white':  #f5f5f5,
 
 
-  //--------------------------| Social
+  //--------------------------| Orange
 
-  'facebook':      #395185,
-  'twitter':       #55acee,
+  'orange-light': #ff9c00,
+  'orange-dark':  #ff4800,
 
 
-  //--------------------------| Thematic
+  //--------------------------| Blue
 
-  'navy-blue':     #009,
-  'governor-bay':  #33c,    // hover link
-  'bossanova':     #5b2869, // visited link
-  'red-berry':     #900,    // active link
-  'bittersweet':   #f66,
-  'golden-tainoi': #fc6,
-  'la-rioja':      #a0c518, // logo
-  'black-squeeze': #e6f3fc,
-  'alabaster':     #f5f5f5  // background color
+  'blue':         #369
 
 );

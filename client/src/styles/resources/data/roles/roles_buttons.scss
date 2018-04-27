@@ -6,7 +6,7 @@
 
 $roles-button-types: (
   'default': (
-    'txt-color': map-get($reg-colors, 'white'),
-    'bgr-color': map-get($reg-backgrounds, 'bossanova')
+    'txt-color': map-get($reg-colors, 'blue'),
+    'bgr-color': map-get($reg-backgrounds, 'white')
   )
 );
