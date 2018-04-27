@@ -1,0 +1,21 @@
+// =========================| Board level |========================= //
+
+
+
+//--------------------------| Body
+
+.pm-board-level {
+  display: flex;
+  justify-content: center;
+
+  & + .pm-board-level {
+    margin-top: 1em;
+  }
+}
+
+
+//--------------------------| Item
+
+.pm-board-level--item {
+  padding: 0 get-em-unit($wing-side-offset);
+}

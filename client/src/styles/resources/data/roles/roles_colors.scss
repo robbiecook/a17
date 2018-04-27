@@ -5,15 +5,16 @@
 //--------------------------| States
 
 $roles-col-states: (
-  'selected':   map-get($reg-colors, 'blue')
+  'selected': map-get($reg-colors, 'blue')
 );
 
 
 //--------------------------| Text
 
 $roles-col-texts: (
-  'system':    map-get($reg-colors, 'graphite'),
-  'negative':  map-get($reg-colors, 'white')
+  'system':   map-get($reg-colors, 'graphite'),
+  'meta':     map-get($reg-colors, 'graphite'),
+  'negative': map-get($reg-colors, 'white')
 );
 
 

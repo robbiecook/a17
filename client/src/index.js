@@ -10,12 +10,9 @@ import 'normalize.css/normalize.css';
 import './styles/scaffolding.scss';
 
 import App from './app';
-import Model from './model.json';
 
 
 //--------------------------| Body
-
-console.log('Model:', Model);
 
 const root = document.createElement('div');
 

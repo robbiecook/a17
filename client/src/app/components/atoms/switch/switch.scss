@@ -2,8 +2,52 @@
 
 
 
-//--------------------------| Body
-
 .pa-switch {
-  //
-}
+
+  //--------------------------| Base
+
+  @include border-radius(.15em);
+
+  position: relative;
+  display: block;
+  height: get-em-unit($roles-size-switch-height);
+  border: 1px solid map-get($reg-colors, 'silver');
+
+
+  //--------------------------| Wings
+
+  @each $wing in 1 2 3 {
+    $gap: if($wing == 1, 0, $wing / 2);
+
+    &[data-wings='#{$wing}'] {
+      width: get-em-unit(($roles-size-switch-width + $gap) * $wing);
+    }
+  }
+
+
+  //--------------------------| Background
+
+  &:not(.black) {
+    @include background-image(map-get($reg-gradients, 'pale-silver'));
+  }
+
+  &.black {
+    @include background-image(map-get($reg-gradients, 'dark-silver'));
+  }
+
+
+  //--------------------------| Label
+
+  .label {
+    position: absolute;
+    right: 0;
+    bottom: .3em;
+    left: 0;
+    font-size: map-get($roles-typo-font-sizes, 'meta');
+    font-weight: map-get($roles-typo-font-weights, 'meta');
+    color: map-get($roles-col-texts, 'meta');
+    text-align: center;
+  }
+
+
+} // .pa-switch

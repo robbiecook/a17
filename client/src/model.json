@@ -101,7 +101,7 @@
       "wings": 1,
       "level": 1,
       "label": "C10",
-      "lights": true,
+      "features": ["lights"],
       "role": {
         "name": "lights",
         "title": "Lights"
@@ -118,7 +118,7 @@
       "wings": 1,
       "level": 1,
       "label": "C10",
-      "lights": true,
+      "features": ["lights"],
       "role": {
         "name": "lights",
         "title": "Lights"
@@ -173,8 +173,7 @@
       "wings": 2,
       "level": 2,
       "label": "C16",
-      "black": true,
-      "outlets": true,
+      "features": ["fat", "black", "outlets"],
       "role": {
         "name": "laundry",
         "title": "Washing machine & dryer"
@@ -191,7 +190,7 @@
       "wings": 2,
       "level": 2,
       "label": "C16",
-      "black": true,
+      "features": ["fat", "black"],
       "role": {
         "name": "boiler",
         "title": "Boiler"
@@ -208,7 +207,7 @@
       "wings": 2,
       "level": 2,
       "label": "C25",
-      "black": true,
+      "features": ["fat", "black"],
       "role": {
         "name": "unknown",
         "title": "Unknown function"
@@ -219,7 +218,7 @@
       "wings": 2,
       "level": 2,
       "label": "25A",
-      "outlets": true,
+      "features": ["fat", "outlets"],
       "role": {
         "name": "outlets",
         "title": "All outlets"
@@ -230,7 +229,7 @@
       "wings": 1,
       "level": 2,
       "label": "C16",
-      "outlets": true,
+      "features": ["outlets"],
       "role": {
         "name": "outlets",
         "title": "Outlets"
@@ -249,7 +248,7 @@
       "wings": 1,
       "level": 2,
       "label": "C16",
-      "outlets": true,
+      "features": ["outlets"],
       "role": {
         "name": "outlets",
         "title": "Outlets"
@@ -268,7 +267,7 @@
       "wings": 1,
       "level": 2,
       "label": "C16",
-      "outlets": true,
+      "features": ["outlets"],
       "role": {
         "name": "outlets",
         "title": "Outlets"
@@ -284,7 +283,7 @@
       "wings": 1,
       "level": 2,
       "label": "C16",
-      "outlets": true,
+      "features": ["outlets"],
       "role": {
         "name": "outlets",
         "title": "Outlets"

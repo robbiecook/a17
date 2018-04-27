@@ -14,7 +14,8 @@
       "maxBOF": 0,
       "maxEOF": 0
     }],
-    "spaced-comment": 0
+    "spaced-comment": 0,
+    "react/prop-types": 0
   },
   "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb-base"]
 }

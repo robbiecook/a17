@@ -27,7 +27,7 @@ $roles-typo-font-sizes-base: (
 $roles-typo-font-sizes: (
   'app-title': get-em-unit(24),
   'system':    get-em-unit(14),
-  'meta':      get-em-unit(13)
+  'meta':      get-em-unit(8)
 );
 
 
@@ -41,5 +41,6 @@ $roles-typo-line-heights: (
 //--------------------------| Font weights
 
 $roles-typo-font-weights: (
-  'text': map-get($reg-font-weights, 'regular')
+  'text': map-get($reg-font-weights, 'light'),
+  'meta': map-get($reg-font-weights, 'bold')
 );
