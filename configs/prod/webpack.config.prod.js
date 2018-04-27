@@ -120,7 +120,7 @@ const config = {
       // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
       background: '#fff',
       // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-      title: pkg.title
+      title: pkg.title.split(' ')[0]
     }),
     new webpack.BannerPlugin({ banner }),
     new webpack.optimize.OccurrenceOrderPlugin(),
