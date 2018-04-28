@@ -8,11 +8,13 @@
 
   $wing-width: get-em-unit($roles-size-switch-width);
   $lever-height: .6em;
+  $glow-color: map-get($reg-colors, 'orange-light');
 
 
   //--------------------------| Base
 
   @include border-radius(.15em);
+  @include transition(all map-get($roles-transitions, 'glow') ease-in-out);
 
   position: relative;
   display: block;
@@ -94,6 +96,15 @@
     font-weight: map-get($roles-typo-font-weights, 'meta');
     color: map-get($roles-col-texts, 'meta');
     text-align: center;
+  }
+
+
+  //--------------------------| State
+
+  &.glow {
+    @include box-shadow(.12em .12em .1em -.1em $glow-color);
+
+    border-color: $glow-color;
   }
 
 

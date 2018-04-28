@@ -20,7 +20,7 @@ const BoardLevel = (props) => {
       {
         props.switchers.map((switcher, index) => (
           <div key={index} className="pm-board-level--item">
-            <Switch data={switcher} />
+            <Switch data={switcher} on={false} />
           </div>
         ))
       }

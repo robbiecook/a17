@@ -11,10 +11,11 @@ import './switch.scss';
 
 //--------------------------| Body
 
-const Switch = ({ data }) => {
+const Switch = ({ data, on }) => {
   const classes = classNames('pa-switch', {
     fat: data.features && data.features.indexOf('fat') !== -1,
     black: data.features && data.features.indexOf('black') !== -1,
+    glow: on,
   });
 
   return (
