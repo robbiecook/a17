@@ -19,7 +19,7 @@ const Switch = ({ data }) => {
 
   return (
     <a className={classes} data-wings={data.wings} data-role={data.role.name}>
-      <span className="lever"></span>
+      <span className="lever"><span className="bar"></span></span>
       <span className="label">{data.label}</span>
     </a>
   );

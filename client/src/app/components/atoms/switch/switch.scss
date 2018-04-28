@@ -4,6 +4,12 @@
 
 .pa-switch {
 
+  //--------------------------| Variables
+
+  $wing-width: get-em-unit($roles-size-switch-width);
+  $lever-height: .6em;
+
+
   //--------------------------| Base
 
   @include border-radius(.15em);
@@ -33,6 +39,47 @@
 
   &.black {
     @include background-image(map-get($reg-gradients, 'dark-silver'));
+  }
+
+
+  //--------------------------| Lever
+
+  .lever {
+    @include translateY(-#{$lever-height/2});
+
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    width: $wing-width;
+    padding: 0 .14em;
+
+    .bar {
+      @include border-radius(.15em);
+
+      display: block;
+      height: 100%;
+    }
+  }
+
+  &:not(.fat) .lever {
+    height: $lever-height;
+  }
+
+  &.fat .lever {
+    height: $lever-height * 2;
+  }
+
+  &:not(.black) .lever .bar {
+    @include background-image(map-get($reg-gradients, 'orange'));
+  }
+
+  &.black .lever .bar {
+    @include background-image(map-get($reg-gradients, 'black'));
+  }
+
+  &[data-role='main'] .lever {
+    left: 0;
+    width: 100%;
   }
 
 
