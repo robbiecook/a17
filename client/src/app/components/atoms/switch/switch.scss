@@ -8,7 +8,8 @@
 
   $wing-width: get-em-unit($roles-size-switch-width);
   $lever-height: .6em;
-  $glow-color: map-get($reg-colors, 'orange-light');
+  $focus-color: map-get($reg-colors, 'orange-light');
+  $shadow: .12em .12em .1em -.1em $focus-color;
 
 
   //--------------------------| Base
@@ -19,7 +20,12 @@
   position: relative;
   display: block;
   height: get-em-unit($roles-size-switch-height);
+  cursor: pointer;
   border: 1px solid map-get($reg-colors, 'silver');
+
+  &:hover {
+    border-color: $focus-color;
+  }
 
 
   //--------------------------| Wings
@@ -102,9 +108,9 @@
   //--------------------------| State
 
   &.glow {
-    @include box-shadow(.12em .12em .1em -.1em $glow-color);
+    @include box-shadow($shadow);
 
-    border-color: $glow-color;
+    border-color: $focus-color;
   }
 
 
