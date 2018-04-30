@@ -22,6 +22,7 @@ const Controllers = () => (
     <div className="flex">
       <div className="column">
         <div data-role='devices'>
+          <Label text='Devices' />
           <ButtonGroup items={devices} />
         </div>
       </div>
@@ -31,11 +32,8 @@ const Controllers = () => (
       </div>
 
       <div className="column">
-        <div data-role='categories'>
-          <ButtonGroup items={categories} />
-        </div>
-
         <div data-role='rooms'>
+          <Label text='Rooms' />
           <ButtonGroup items={rooms} />
         </div>
       </div>
