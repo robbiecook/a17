@@ -3,7 +3,7 @@ node_js:
 - node
 script:
 - npm install
-- npm build
+- npm run build
 - printf '.gitignore\ndeployed*' > client/dist/.gitignore
 - printf 'a17.martinmetodiev.com' > client/dist/CNAME
 - cp 'README.md' client/dist
