@@ -2,8 +2,42 @@
 
 
 
-//--------------------------| Body
-
 .pa-button {
-  //
-}
+
+  //--------------------------| Variables
+
+  $btn-font-size: map-get($roles-typo-font-sizes, 'button');
+  $link-color: map-get($roles-col-links, 'link');
+  $white-color: map-get($reg-backgrounds, 'white');
+
+
+  //--------------------------| Base
+
+  @include border-radius(.2em);
+  @include transition(all map-get($roles-transitions, 'glow') ease-in-out);
+
+  display: inline-block;
+  font-size: $btn-font-size;
+  line-height: 2em;
+  color: $link-color;
+  cursor: pointer;
+  background-color: map-get($reg-backgrounds, 'white');
+
+
+  //--------------------------| States
+
+  &:hover,
+  &.active {
+    color: $white-color;
+  }
+
+  &:hover {
+    background-color: rgba($link-color, .7);
+  }
+
+  &.active {
+    background-color: $link-color;
+  }
+
+
+} // .pa-button

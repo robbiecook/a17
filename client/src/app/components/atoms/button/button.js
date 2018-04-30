@@ -10,10 +10,10 @@ import './button.scss';
 
 //--------------------------| Body
 
-const Button = () => (
-  <div className="pa-button">
-
-  </div>
+const Button = props => (
+  <a className="pa-button">
+    {props.title}
+  </a>
 );
 
 

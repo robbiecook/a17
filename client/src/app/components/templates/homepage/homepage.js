@@ -5,30 +5,25 @@
 //--------------------------| Import
 
 import React from 'react';
-import Header from '../../organisms/header';
-import Board from '../../organisms/board';
-import Controllers from '../../organisms/controllers';
-import Model from '../../../../model.json';
+import getComponent from '../../../helpers/get-component';
 import './homepage.scss';
 
 
 //--------------------------| Body
 
-console.log('Model:', Model.switchers);
-
-const HomePage = () => (
+const HomePage = props => (
   <div className="pt-homepage">
     <header className="pt-homepage--header">
-      <Header />
+      {getComponent(props.children, 'header')}
     </header>
 
     <main className="pt-homepage--main">
       <section className="pt-homepage--section">
-        <Board switchers={Model.switchers} />
+        {getComponent(props.children, 'main')}
       </section>
 
       <section className="pt-homepage--section">
-        <Controllers />
+        {getComponent(props.children, 'section')}
       </section>
     </main>
   </div>

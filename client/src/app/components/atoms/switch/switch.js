@@ -6,6 +6,7 @@
 
 import React from 'react';
 import classNames from 'classnames';
+import Meta from '../meta';
 import './switch.scss';
 
 
@@ -15,13 +16,13 @@ const Switch = ({ data, on }) => {
   const classes = classNames('pa-switch', {
     fat: data.features && data.features.indexOf('fat') !== -1,
     black: data.features && data.features.indexOf('black') !== -1,
-    glow: on,
+    glow: on
   });
 
   return (
     <a className={classes} data-wings={data.wings} data-role={data.role.name}>
       <span className="lever"><span className="bar"></span></span>
-      <span className="label">{data.label}</span>
+      <Meta text={data.label} />
     </a>
   );
 };

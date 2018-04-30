@@ -5,5 +5,7 @@
 //--------------------------| Body
 
 .pa-meta {
-  //
+  font-size: map-get($roles-typo-font-sizes, 'meta');
+  font-weight: map-get($roles-typo-font-weights, 'meta');
+  color: map-get($roles-col-texts, 'meta');
 }

@@ -2,8 +2,34 @@
 
 
 
-//--------------------------| Body
-
 .po-controllers {
-  padding: get-em-unit(map-get($roles-offsets, 'controllers'));
-}
+
+  //--------------------------| Variables
+
+  $offset: get-em-unit(map-get($roles-offsets, 'controllers'));
+
+  //--------------------------| Body
+
+  padding: $offset;
+
+  .column:not(:nth-child(2)) {
+    flex: 1;
+  }
+
+  .column:nth-child(2) {
+    align-self: center;
+    padding: 0 1em;
+  }
+
+  > .flex {
+    margin-top: $offset;
+  }
+
+  .column {
+    > div + div {
+      margin-top: $offset;
+    }
+  }
+
+
+} // .po-controllers

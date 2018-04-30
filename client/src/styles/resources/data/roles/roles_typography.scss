@@ -26,7 +26,8 @@ $roles-typo-font-sizes-base: (
 
 $roles-typo-font-sizes: (
   'app-title': get-em-unit(24),
-  'system':    get-em-unit(14),
+  'label':     get-em-unit(14),
+  'button':    get-em-unit(12),
   'meta':      get-em-unit(8)
 );
 

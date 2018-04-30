@@ -6,7 +6,11 @@
 
 import React from 'react';
 import { hot } from 'react-hot-loader';
+import Header from './components/organisms/header';
+import Board from './components/organisms/board';
+import Controllers from './components/organisms/controllers';
 import HomePage from './components/templates/homepage';
+import Model from '../model.json';
 import './app.scss';
 
 
@@ -14,7 +18,11 @@ import './app.scss';
 
 const App = () => (
   <div id="app">
-    <HomePage />
+    <HomePage>
+      <Header key='header' />
+      <Board key='main' switchers={Model.switchers} />
+      <Controllers key='section' />
+    </HomePage>
   </div>
 );
 

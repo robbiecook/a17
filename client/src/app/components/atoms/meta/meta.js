@@ -10,10 +10,10 @@ import './meta.scss';
 
 //--------------------------| Body
 
-const Meta = () => (
-  <div className="pa-meta">
-
-  </div>
+const Meta = props => (
+  <label className="pa-meta">
+    {props.text}
+  </label>
 );
 
 

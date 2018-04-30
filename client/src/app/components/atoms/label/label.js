@@ -10,10 +10,10 @@ import './label.scss';
 
 //--------------------------| Body
 
-const Label = () => (
-  <div className="pa-label">
-
-  </div>
+const Label = props => (
+  <label className="pa-label">
+    {props.text}
+  </label>
 );
 
 

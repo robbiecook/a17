@@ -5,5 +5,5 @@
 //--------------------------| Body
 
 .pa-label {
-  //
+  font-size: map-get($roles-typo-font-sizes, 'label');
 }
