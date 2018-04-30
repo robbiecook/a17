@@ -292,5 +292,16 @@
         "bedroom"
       ]
     }
+  ],
+
+  "categories": [
+    {
+      "name": "lights",
+      "title": "Lights"
+    },
+    {
+      "name": "outlets",
+      "title": "Outlets"
+    }
   ]
 }
