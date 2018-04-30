@@ -16,7 +16,7 @@ import './controllers.scss';
 
 const Controllers = props => (
   <div className="po-controllers">
-    <Label text='Show switcher/s for:' />
+    <Label text='Turn on switcher/s by:' />
 
     <div className="flex">
       <div className="column">
