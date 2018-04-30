@@ -11,11 +11,16 @@ import './button-group.scss';
 
 //--------------------------| Body
 
-const ButtonGroup = ({ items }) => (
+const ButtonGroup = props => (
   <ul className="pm-button-group">
-    { items.map((item, index) => (
+    { props.items.map((item, index) => (
       <li className='item' key={item.name}>
-        <Button title={item.title} />
+        <Button
+          handleClick={(name) => {
+            props.handleSelection(name);
+          }}
+          {...item}
+        />
       </li>
     )) }
   </ul>

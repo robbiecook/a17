@@ -8,22 +8,26 @@ import React from 'react';
 import ButtonGroup from '../../molecules/button-group';
 import Label from '../../atoms/label';
 import Meta from '../../atoms/meta';
-import { devices, rooms, categories } from '../../../../model.json';
 import '../../../../styles/tokens/tokens_flexbox.scss';
 import './controllers.scss';
 
 
 //--------------------------| Body
 
-const Controllers = () => (
+const Controllers = props => (
   <div className="po-controllers">
     <Label text='Show switcher/s for:' />
 
     <div className="flex">
       <div className="column">
         <div data-role='devices'>
-          <Label text='Devices' />
-          <ButtonGroup items={devices} />
+          <Label text='Device' />
+          <ButtonGroup
+            items={props.devices}
+            handleSelection={(selection) => {
+              props.handleSelection('devices', selection);
+            }}
+          />
         </div>
       </div>
 
@@ -33,8 +37,13 @@ const Controllers = () => (
 
       <div className="column">
         <div data-role='rooms'>
-          <Label text='Rooms' />
-          <ButtonGroup items={rooms} />
+          <Label text='Room' />
+          <ButtonGroup
+            items={props.rooms}
+            handleSelection={(selection) => {
+              props.handleSelection('rooms', selection);
+            }}
+          />
         </div>
       </div>
     </div>

@@ -17,9 +17,11 @@
   @include transition(all map-get($roles-transitions, 'glow') ease-in-out);
 
   display: inline-block;
+  padding: 0 1em;
   font-size: $btn-font-size;
   line-height: 2em;
   color: $link-color;
+  text-align: left;
   cursor: pointer;
   background-color: map-get($reg-backgrounds, 'white');
 

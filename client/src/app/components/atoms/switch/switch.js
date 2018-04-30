@@ -12,17 +12,23 @@ import './switch.scss';
 
 //--------------------------| Body
 
-const Switch = ({ data, on }) => {
+const Switch = ({
+  features,
+  wings,
+  role,
+  label,
+  glow
+}) => {
   const classes = classNames('pa-switch', {
-    fat: data.features && data.features.indexOf('fat') !== -1,
-    black: data.features && data.features.indexOf('black') !== -1,
-    glow: on
+    fat: features && features.indexOf('fat') !== -1,
+    black: features && features.indexOf('black') !== -1,
+    glow
   });
 
   return (
-    <a className={classes} data-wings={data.wings} data-role={data.role.name}>
+    <a className={classes} data-wings={wings} data-role={role.name}>
       <span className="lever"><span className="bar"></span></span>
-      <Meta text={data.label} />
+      <Meta text={label} />
     </a>
   );
 };

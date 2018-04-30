@@ -5,16 +5,26 @@
 //--------------------------| Import
 
 import React from 'react';
+import classNames from 'classnames';
 import './button.scss';
 
 
 //--------------------------| Body
 
-const Button = props => (
-  <a className="pa-button">
-    {props.title}
-  </a>
-);
+
+const Button = (props) => {
+  const classes = classNames('pa-button', {
+    active: props.active
+  });
+
+  return (
+    <a className={classes} onClick={() => {
+      props.handleClick(props.name);
+    }}>
+      {props.title}
+    </a>
+  );
+};
 
 
 //--------------------------| Export
