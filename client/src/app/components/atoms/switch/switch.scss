@@ -8,24 +8,21 @@
 
   $wing-width: get-em-unit($roles-size-switch-width);
   $lever-height: .6em;
-  $focus-color: map-get($reg-colors, 'orange-light');
-  $shadow: .12em .12em .1em -.1em $focus-color;
+  $focus-color: map-get($reg-colors, 'graphite');
+  $shadow: 0 0 .4em $focus-color;
+  $transition: all map-get($roles-transitions, 'glow') ease-in-out;
 
 
   //--------------------------| Base
 
   @include border-radius(.15em);
-  @include transition(all map-get($roles-transitions, 'glow') ease-in-out);
+  @include transition($transition);
 
   position: relative;
   display: block;
   height: get-em-unit($roles-size-switch-height);
-  cursor: pointer;
+  //cursor: pointer;
   border: 1px solid map-get($reg-colors, 'silver');
-
-  &:hover {
-    border-color: $focus-color;
-  }
 
 
   //--------------------------| Wings
@@ -54,6 +51,7 @@
 
   .lever {
     @include translateY(-#{$lever-height/2});
+    @include transition($transition);
 
     position: absolute;
     top: 50%;
@@ -102,12 +100,20 @@
   }
 
 
-  //--------------------------| State
+  //--------------------------| States
+
+  //&:hover {
+  //  border-color: rgba($focus-color, .5);
+  //}
 
   &.glow {
     @include box-shadow($shadow);
 
     border-color: $focus-color;
+
+    .lever {
+      @include translateY(-#{$lever-height * 1.5});
+    }
   }
 
 
