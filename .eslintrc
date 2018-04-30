@@ -14,7 +14,9 @@
       "maxBOF": 0,
       "maxEOF": 0
     }],
+    "no-param-reassign": ["error", { "props": false }],
     "comma-dangle": ["error", "never"],
+    "brace-style": ["error", "stroustrup"],
     "spaced-comment": 0,
     "react/prop-types": 0
   },
